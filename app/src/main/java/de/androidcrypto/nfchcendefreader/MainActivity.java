@@ -11,9 +11,7 @@ import android.nfc.NdefMessage;
 import android.nfc.NdefRecord;
 import android.nfc.NfcAdapter;
 import android.nfc.Tag;
-import android.nfc.TagLostException;
 import android.nfc.tech.IsoDep;
-import android.nfc.tech.NfcA;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.VibrationEffect;
@@ -35,9 +33,7 @@ import androidx.core.content.ContextCompat;
 
 import java.io.IOException;
 import java.io.OutputStreamWriter;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity implements NfcAdapter.ReaderCallback {
@@ -261,7 +257,6 @@ public class MainActivity extends AppCompatActivity implements NfcAdapter.Reader
                         }
                         dumpExportString = readResult.getText().toString();
                     }
-                //dumpExportString = readResult.getText().toString();
 
                 } catch (FormatException e) {
                     e.printStackTrace();
